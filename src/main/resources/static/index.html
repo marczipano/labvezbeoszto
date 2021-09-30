@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Kezdőoldal</title>
+    <link rel="stylesheet" href="default.css">
 </head>
 <body>
-<form action="/add" method="POST">
-    <p>Jelentkezés</p>
 
-    <div>
-        <label for="lastName">Vezetéknév:</label>
-        <input name="first" id="lastName">
-    </div>
-    <div>
-        <label for="firstName">Keresztnév:</label>
-        <input name="last" id="firstName">
-    </div>
-    <div>
-        <label for="email">E-mail cím:</label>
-        <input name="email" id="email">
-    </div>
-    <div>
-        <label for="phone">Telefonszám:</label>
-        <input name="phone" id="phone">
-    </div>
-    <div>
-        <button>Jelentkezés</button>
-    </div>
-</form>
+<div class="panel">
+    <h1>DemonsTrait</h1>
+    <form action="/add" method="POST">
+        <h2>Jelentkezés</h2>
 
-<form action="/list" method="GET">
-    <button>Jelentkezések listázása</button>
-</form>
+        <div>
+            <label for="lastName">Vezetéknév:</label>
+            <input name="first" id="lastName" type="text">
+        </div>
+        <div>
+            <label for="firstName">Keresztnév:</label>
+            <input name="last" id="firstName" type="text">
+        </div>
+        <div>
+            <label for="email">E-mail cím:</label>
+            <input name="email" id="email" type="email">
+        </div>
+        <div>
+            <label for="phone">Telefonszám:</label>
+            <input name="phone" id="phone" type="tel">
+        </div>
+        <div>
+            <br>
+            <button>Jelentkezés</button>
+        </div>
+    </form>
+
+    <h2>Listázás</h2>
+    <form action="/list" method="GET">
+        <button>Listázás</button>
+    </form>
+</div>
 </body>
 </html>

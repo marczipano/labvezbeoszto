@@ -1,14 +1,14 @@
-package com.demonstrator;
+package com.demonstrait;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class DemonsTrator {
+public class DemonsTrait {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemonsTrator.class, args);
+		SpringApplication.run(DemonsTrait.class, args);
 	}
 
 }

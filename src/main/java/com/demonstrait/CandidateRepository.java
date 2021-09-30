@@ -1,4 +1,4 @@
-package com.demonstrator;
+package com.demonstrait;
 
 import org.springframework.data.repository.CrudRepository;
 

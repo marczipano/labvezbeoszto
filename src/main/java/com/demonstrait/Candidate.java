@@ -1,4 +1,4 @@
-package com.demonstrator;
+package com.demonstrait;
 
 
 import javax.persistence.Entity;
