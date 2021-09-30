@@ -9,6 +9,7 @@ public class DemonsTrait {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemonsTrait.class, args);
+		System.out.println("Hello");
 	}
 
 }
