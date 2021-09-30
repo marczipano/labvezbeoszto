@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kezdőoldal</title>
+</head>
+<body>
+<form action="/add" method="POST">
+    <p>Jelentkezés</p>
+
+    <div>
+        <label for="lastName">Vezetéknév:</label>
+        <input name="first" id="lastName">
+    </div>
+    <div>
+        <label for="firstName">Keresztnév:</label>
+        <input name="last" id="firstName">
+    </div>
+    <div>
+        <label for="email">E-mail cím:</label>
+        <input name="email" id="email">
+    </div>
+    <div>
+        <label for="phone">Telefonszám:</label>
+        <input name="phone" id="phone">
+    </div>
+    <div>
+        <button>Jelentkezés</button>
+    </div>
+</form>
+
+<form action="/list" method="GET">
+    <button>Jelentkezések listázása</button>
+</form>
+</body>
+</html>
