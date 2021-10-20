@@ -1,21 +1,28 @@
-package com.demonstrait;
+package com.demonstrait.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Candidate {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, updatable = false)            //secret stuff
     private Integer id;
 
     private String firstName;
     private String lastName;
     private String email;
     private String phone;
+
+    public Candidate(String firstName, String lastName, String email, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public Candidate() { }
 
     public Integer getId() {
         return id;
@@ -57,4 +64,13 @@ public class Candidate {
         this.phone = phone;
     }
 
+    @Override
+    public String toString() {
+        return "Candidate{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }
