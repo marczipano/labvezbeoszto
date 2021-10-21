@@ -46,24 +46,18 @@ public class CandidateService {
     }
 
 
-    /*
-    public Candidate finddCandidateById(Integer id) {
-        return candidateRepository.findCandidateById(id).orElseThrow(() -> new UserNotFoundException
-                            ("User by id " + id + "was not found"));
-    }*/
+
 
     public Candidate addCandidate(Candidate candidate){
         candidate.setId((int) (Math.random() * 100));
         return candidateRepository.save(candidate);
     }
 
-
-
     public Candidate updateCandidate(Candidate candidate){
         return candidateRepository.save(candidate);
     }
 
     public static void deleteCandidate(Integer id){
-        candidateRepository.deleteCandidateByID(id);
+        candidateRepository.deleteCandidateById(id);
     }
 }

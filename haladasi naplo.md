@@ -17,4 +17,25 @@ HelloWorld projekt létrehozása és megtekintése a böngészőben
 <br> H2 adatbázis létrehozása, az űrlapból kinyert adatok adatbázisba helyezése (POST method)
 <br> Az adatbázis rekordjainak listázása JSON formátumban
 <br> Az adatbázis egyelőre a memóriába ment, így a program leállásakor törlődnek az adatok
-<br> TODO: fájlba mentés, hosszútávú adattárolás
+
+
+**Október 15.**
+<br>_Backend_: 
+<br>MySQL telepítése, alkalmazások beszerzése, összehangolása
+<br>Model szervezése, kurzus létrehozás, packagekbe szervezés
+
+**Október 16.**
+<br>_Frontend_:
+<br>Ismerkedés az Angularral, NPM telepítése
+<br>Angular CLI telepítése, kipróbálása
+<br>Angular alapműködése
+<br>Hello World Anglarban
+
+
+**Október 20.**
+<br>_Backend_:
+<br>Service és Model közötti kapcsolat létrehozása, összehangolása
+<br>_Frontend_:
+<br>Kapcsolat a Frontend Bakcend között
+<br>Problémák megoldása
+<br>TODO: adatlekérés frontenden

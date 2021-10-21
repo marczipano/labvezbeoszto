@@ -4,11 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.cors.CorsConfiguration;
-
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
 
 import java.util.Arrays;
 
@@ -20,6 +17,9 @@ public class DemonsTrait {
 		SpringApplication.run(DemonsTrait.class, args);
 
 	}
+
+
+
 
 	@Bean
 	public CorsFilter corsFilter() {
@@ -34,7 +34,7 @@ public class DemonsTrait {
 		corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
-		return new CorsFilter((CorsConfigurationSource) urlBasedCorsConfigurationSource);
+		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
 
 }
