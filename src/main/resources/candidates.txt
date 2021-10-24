@@ -1,0 +1,54 @@
+{
+    "firstName": "Gloria",
+    "lastName": "Lynch",
+    "email": "gloria.lynch@e-mail.com",
+    "phone": "202-555-0131"
+},
+{
+    "firstName": "Hannah",
+    "lastName": "Pierce",
+    "email": "hannah.pierce@e-mail.com",
+    "phone": "303-555-0158"
+},
+{
+    "firstName": "Nevil",
+    "lastName": "Hines",
+    "email": "nevil.hines@e-mail.com",
+    "phone": "502-555-0118"
+},
+{
+    "firstName": "Roberta",
+    "lastName": "James",
+    "email": "roberta.james@e-mail.com",
+    "phone": "202-555-0137"
+},
+{
+    "firstName": "Jill",
+    "lastName": "Poole",
+    "email": "jill.poole@e-mail.com",
+    "phone": "602-555-0189"
+},
+{
+    "firstName": "Patrick",
+    "lastName": "Estrada",
+    "email": "patrick.estrada@e-mail.com",
+    "phone": "404-555-0170"
+},
+{
+    "firstName": "April",
+    "lastName": "Nichols",
+    "email": "april.nichols@e-mail.com",
+    "phone": "775-555-0192"
+},
+{
+    "firstName": "Hugh",
+    "lastName": "Herrera",
+    "email": "hugh.herrera@e-mail.com",
+    "phone": "701-555-0140"
+},
+{
+    "firstName": "Rita",
+    "lastName": "Reid",
+    "email": "rita.reid@e-mail.com",
+    "phone": "404-555-0176"
+},
