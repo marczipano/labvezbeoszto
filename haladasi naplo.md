@@ -39,3 +39,13 @@ HelloWorld projekt létrehozása és megtekintése a böngészőben
 <br>Kapcsolat a Frontend Bakcend között
 <br>Problémák megoldása
 <br>TODO: adatlekérés frontenden
+
+**Október 25.**
+<br>_Frontend_:
+<br>Angular routing elkészítése, listázás
+
+**Október 26.**
+<br>_Frontend_:
+<br>Angular form megismerése, addCandidate component megvalósítása
+<br>Működik a formon keresztüli hozzáadás
+<br>TODO: ID léptetés, átadott típus?
