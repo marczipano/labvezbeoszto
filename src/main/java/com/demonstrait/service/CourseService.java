@@ -36,7 +36,7 @@ public class CourseService {
 
 
     public Course findCourseById(@PathVariable Integer id) {
-        return courseRepository.findCourseByID(id);
+        return courseRepository.findCourseById(id);
     }
 
     public Course addCourse(Course course){
