@@ -58,6 +58,8 @@ public class CandidateService {
     }
 
     public static void deleteCandidate(Integer id){
+
         candidateRepository.deleteCandidateById(id);
+
     }
 }

@@ -39,3 +39,9 @@ HelloWorld projekt létrehozása és megtekintése a böngészőben
 <br>Kapcsolat a Frontend Bakcend között
 <br>Problémák megoldása
 <br>TODO: adatlekérés frontenden
+
+**Október 25.**
+<br>_Frontend_:
+<br>Angular adatlekérés sikeres, delete még nem működik
+<br>
+<br>

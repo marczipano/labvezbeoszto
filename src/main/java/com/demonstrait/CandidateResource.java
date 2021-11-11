@@ -52,8 +52,8 @@ public class CandidateResource {
         return new ResponseEntity<>(updateCandidate, HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteCandidate(@PathVariable("id") Integer id){
+    @PostMapping("/delete")
+    public ResponseEntity<?> deleteCandidate(@RequestParam Integer id){
         CandidateService.deleteCandidate(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
