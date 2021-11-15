@@ -4,7 +4,7 @@ import com.demonstrait.model.Candidate;
 import com.demonstrait.repo.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -49,13 +49,13 @@ public class CandidateService {
 
 
     public Candidate addCandidate(Candidate candidate){
-        candidate.setId((int) (Math.random() * 100));
         return candidateRepository.save(candidate);
     }
 
     public Candidate updateCandidate(Candidate candidate){
         return candidateRepository.save(candidate);
     }
+
 
     public static void deleteCandidate(Integer id){
 
