@@ -26,27 +26,27 @@ public class CourseController {
         return  new ResponseEntity<>(courses, HttpStatus.OK);
     }
 
-    @GetMapping(path ="{candidateId}/courses/{id}")
+    @GetMapping(path ="/{candidateId}/courses/{id}")
     public ResponseEntity<Course> getCourseByID(@PathVariable("id") Integer id){
         Course course = courseService.findCourseById(id);
         return new ResponseEntity<>(course, HttpStatus.OK);
     }
 
-    @PostMapping(path ="{candidateId}/courses/{id}")
+    @PostMapping(path ="/{candidateId}/courses/{id}")
     public ResponseEntity<Course> addCandidate(@Validated @RequestBody Course course) {
         Course newcourse = courseService.addCourse(course);
         return new ResponseEntity<>(newcourse, HttpStatus.CREATED);
     }
 
 
-    @PutMapping
+    @PutMapping(path = "/update")
     public ResponseEntity<Course> updateCourse(@RequestBody Course course){
         Course _course = courseService.addCourse(course);
         return new ResponseEntity<>(_course, HttpStatus.OK);
     }
 
     @Transactional
-    @DeleteMapping (path ="{id}")
+    @DeleteMapping (path ="/{candidateId}/courses/{id}")
     public ResponseEntity<Candidate> deleteCourse(@PathVariable("id") Integer id){
         courseService.deleteCourse(id);
         return new ResponseEntity<>(HttpStatus.OK);
