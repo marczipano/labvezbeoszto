@@ -20,8 +20,14 @@ public class CourseController {
 
     public CourseController(CourseService courseService){ this.courseService = courseService; }
 
+    @GetMapping("/courses")
+    public ResponseEntity<List<Course>> getAllCourses(){
+        List<Course> courses = courseService.getCourses();
+        return  new ResponseEntity<>(courses, HttpStatus.OK);
+    }
+
     @GetMapping("/{candidateId}/courses")
-    public ResponseEntity<List<Course>> getAllCourse(){
+    public ResponseEntity<List<Course>> getCourse(){
         List<Course> courses = courseService.getCourses();
         return  new ResponseEntity<>(courses, HttpStatus.OK);
     }
