@@ -19,17 +19,6 @@ public class CourseService {
         this.courseRepository = courseRepository;
     }
 
-    public Course addCourseWithValues(String name, String year, String tutor){
-        Course course = new Course();
-        course.setName(name);
-        course.setYear(year);
-        course.setTutor(tutor);
-        course.setId((int)(Math.random()*100));
-
-        courseRepository.save(course);
-        return course;
-    }
-
     public List<Course> getCourses() {
         return courseRepository.findAll();
     }
@@ -39,8 +28,11 @@ public class CourseService {
         return courseRepository.findCourseById(id);
     }
 
+    public List<Course> findAllByName(@PathVariable String name) {
+        return courseRepository.findAllByName(name);
+    }
+
     public Course addCourse(Course course){
-        course.setId((int) (Math.random() * 100));
         return courseRepository.save(course);
     }
 
@@ -48,9 +40,5 @@ public class CourseService {
         return courseRepository.save(course);
     }
 
-    public static void deleteCourse(Integer id){
-
-        courseRepository.deleteCourseById(id);
-
-    }
+    public static void deleteCourse(Integer id){  courseRepository.deleteCourseById(id);   }
 }

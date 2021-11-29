@@ -2,6 +2,7 @@ package com.demonstrait.controller;
 
 
 import com.demonstrait.model.Candidate;
+import com.demonstrait.model.Course;
 import com.demonstrait.service.CandidateService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,11 +29,19 @@ public class CandidateController {
         return new ResponseEntity<>(candidates, HttpStatus.OK);
     }
 
-    @GetMapping(path ="{id}")
+    @GetMapping(path ="/{id}")
     public ResponseEntity<Candidate> getCandidateByID(@PathVariable("id") Integer id){
         Candidate candidate = candidateService.findCandidateById(id);
         return new ResponseEntity<>(candidate, HttpStatus.OK);
     }
+
+    @GetMapping(path ="/{id}/courses")
+    public ResponseEntity<List<Course>> getCandidatesCourses(@PathVariable("id") Integer id){
+        Candidate candidate = candidateService.findCandidateById(id);
+        List<Course> courses = candidateService.findCandidatesCourses(candidate);
+        return new ResponseEntity<>(courses, HttpStatus.OK);
+    }
+
 
 
     @PostMapping
@@ -41,16 +50,6 @@ public class CandidateController {
         return new ResponseEntity<>(newcandidate, HttpStatus.CREATED);
     }
 
-    /*
-    @PostMapping
-    public ResponseEntity<Candidate> addCandidateWithValues(@RequestParam String first,
-                                                  @RequestParam String last,
-                                                  @RequestParam String email,
-                                                  @RequestParam String phone){
-        Candidate newcandidate = candidateService.addCandidateWithValues(first, last, email, phone);
-        return new ResponseEntity<>(newcandidate, HttpStatus.CREATED);
-    }
-    */
 
     @PutMapping
     public ResponseEntity<Candidate> updateCandidate(@RequestBody Candidate candidate){
@@ -58,8 +57,10 @@ public class CandidateController {
         return new ResponseEntity<>(updateCandidate, HttpStatus.OK);
     }
 
+
+
     @Transactional
-    @DeleteMapping (path ="{id}")
+    @DeleteMapping (path ="/{id}")
     public ResponseEntity<Candidate> deleteCandidate(@PathVariable("id") Integer id){
         candidateService.deleteCandidate(id);
         return new ResponseEntity<>(HttpStatus.OK);

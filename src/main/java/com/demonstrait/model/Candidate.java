@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Candidate {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false, updatable = false)            //secret stuff
+    @Column(nullable = false, updatable = false)
     private Integer id;
 
     private String firstName;
@@ -22,14 +22,11 @@ public class Candidate {
         this.phone = phone;
     }
 
-    public Candidate() { }
+    public Candidate() {
+    }
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getFirstName() {
@@ -67,10 +64,12 @@ public class Candidate {
     @Override
     public String toString() {
         return "Candidate{" +
-                "firstName='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';
     }
 }
+

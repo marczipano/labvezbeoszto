@@ -1,6 +1,7 @@
 package com.demonstrait.service;
 
 import com.demonstrait.model.Candidate;
+import com.demonstrait.model.Course;
 import com.demonstrait.repo.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,29 +14,11 @@ public class CandidateService {
 
     private static CandidateRepository candidateRepository;
 
-
     @Autowired
     public CandidateService(CandidateRepository candidateRepository){
         this.candidateRepository = candidateRepository;
     }
 
-
-    public Candidate addCandidateWithValues(
-            String first,
-            String last,
-            String email,
-            String phone) {
-        Candidate candidate = new Candidate();
-        candidate.setFirstName(first);
-        candidate.setLastName(last);
-        candidate.setEmail(email);
-        candidate.setPhone(phone);
-        candidate.setId((int)(Math.random()*100));
-
-        candidateRepository.save(candidate);
-
-        return candidate;
-    }
 
     public List<Candidate> getCandidates() {
         return candidateRepository.findAll();
@@ -45,7 +28,9 @@ public class CandidateService {
         return candidateRepository.findCandidateById(id);
     }
 
-
+    public List<Course> findCandidatesCourses(Candidate candidate) {
+        return candidateRepository.findCandidatesCourses(candidate);
+    }
 
 
     public Candidate addCandidate(Candidate candidate){
@@ -62,4 +47,14 @@ public class CandidateService {
         candidateRepository.deleteCandidateById(id);
 
     }
+
+    public static CandidateRepository getCandidateRepository() {
+        return candidateRepository;
+    }
+
+    public static void setCandidateRepository(CandidateRepository candidateRepository) {
+        CandidateService.candidateRepository = candidateRepository;
+    }
+
+
 }

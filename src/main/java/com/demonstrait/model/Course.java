@@ -1,65 +1,77 @@
 package com.demonstrait.model;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false, updatable = false)            //secret stuff
+    @Column(nullable = false, updatable = false)
     private Integer id;
 
     private String name;
-    private String year;
-    private String tutor;
+    private LocalDateTime beginningTime;
+    private int duration = 2;
 
-    public Course(String name, String year, String tutor) {
+    /**
+     * végső oktató majd a generálás után
+     */
+    private Integer tutorId = null;
+
+
+    public Course(String name, LocalDateTime beginningTime, int duration) {
         this.name = name;
-        this.year = year;
-        this.tutor = tutor;
+        this.beginningTime = beginningTime;
+        this.duration = duration;
+    }
+
+    public Course() {    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getYear() {
-        return year;
-    }
-
-    public String getTutor() {
-        return tutor;
-    }
-    public Course() { }
-
-    public Integer getId() {
-        return id;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setYear(String year) {
-        this.year = year;
+    public LocalDateTime getBeginningTime() {
+        return beginningTime;
     }
 
-    public void setTutor(String tutor) {
-        this.tutor = tutor;
-    }
-    public void setId(Integer id) {
-        this.id = id;
+    public void setBeginningTime(LocalDateTime beginningTime) {
+        this.beginningTime = beginningTime;
     }
 
+    public int getDuration() {
+        return duration;
+    }
 
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
 
+    public Integer getTutorId() {
+        return tutorId;
+    }
+
+    public void setTutorId(Integer tutorId) {
+        this.tutorId = tutorId;
+    }
 
     @Override
     public String toString() {
         return "Course{" +
-                "name='" + name + '\'' +
-                ", year='" + year + '\'' +
-                ", tutor='" + tutor + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", beginningTime=" + beginningTime +
+                ", duration=" + duration +
+                ", tutorId=" + tutorId +
                 '}';
     }
 }
