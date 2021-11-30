@@ -11,7 +11,7 @@ public class Course {
     private Integer id;
 
     private String name;
-    private String beginningTime;
+    private String beginTime;
     private int duration = 2;
 
     /**
@@ -22,7 +22,7 @@ public class Course {
 
     public Course(String name, String beginningTime, int duration) {
         this.name = name;
-        this.beginningTime = beginningTime;
+        this.beginTime = beginningTime;
         this.duration = duration;
     }
 
@@ -41,11 +41,11 @@ public class Course {
     }
 
     public String getBeginningTime() {
-        return beginningTime;
+        return beginTime;
     }
 
     public void setBeginningTime(String beginningTime) {
-        this.beginningTime = beginningTime;
+        this.beginTime = beginningTime;
     }
 
     public int getDuration() {
@@ -69,7 +69,7 @@ public class Course {
         return "Course{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", beginningTime=" + beginningTime +
+                ", beginningTime=" + beginTime +
                 ", duration=" + duration +
                 ", tutorId=" + tutorId +
                 '}';
