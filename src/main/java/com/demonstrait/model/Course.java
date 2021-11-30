@@ -7,11 +7,11 @@ import java.time.LocalDateTime;
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false, columnDefinition = "LONGVARBINARY")
     private Integer id;
 
     private String name;
-    private LocalDateTime beginningTime;
+    private String beginningTime;
     private int duration = 2;
 
     /**
@@ -20,7 +20,7 @@ public class Course {
     private Integer tutorId = null;
 
 
-    public Course(String name, LocalDateTime beginningTime, int duration) {
+    public Course(String name, String beginningTime, int duration) {
         this.name = name;
         this.beginningTime = beginningTime;
         this.duration = duration;
@@ -40,11 +40,11 @@ public class Course {
         this.name = name;
     }
 
-    public LocalDateTime getBeginningTime() {
+    public String getBeginningTime() {
         return beginningTime;
     }
 
-    public void setBeginningTime(LocalDateTime beginningTime) {
+    public void setBeginningTime(String beginningTime) {
         this.beginningTime = beginningTime;
     }
 

@@ -40,7 +40,7 @@ public class CourseController {
 
 
     @PostMapping
-    public ResponseEntity<Course> addCandidate(@Validated @RequestBody Course course) {
+    public ResponseEntity<Course> addCourse(@Validated @RequestBody Course course) {
         Course newcourse = courseService.addCourse(course);
         return new ResponseEntity<>(newcourse, HttpStatus.CREATED);
     }

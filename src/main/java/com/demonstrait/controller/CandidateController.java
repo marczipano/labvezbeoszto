@@ -65,4 +65,5 @@ public class CandidateController {
         candidateService.deleteCandidate(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
 }
