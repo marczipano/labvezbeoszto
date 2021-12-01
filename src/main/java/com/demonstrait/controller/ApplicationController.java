@@ -39,6 +39,13 @@ public class ApplicationController {
         return new ResponseEntity<>(newapplication, HttpStatus.CREATED);
     }
 
+    @PostMapping
+    public ResponseEntity<Application> addApplicationById(@Validated @RequestBody int tutor_id, int course_id) {
+        Application temp = new Application(tutor_id, course_id);
+        Application newapplication = applicationService.addApplication(temp);
+        return new ResponseEntity<>(newapplication, HttpStatus.CREATED);
+    }
+
     @PutMapping
     public ResponseEntity<Application> updateApplication(@RequestBody Application application){
         Application newApplication = applicationService.updateApplication(application);
