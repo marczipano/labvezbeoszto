@@ -41,4 +41,9 @@ public class CourseService {
     }
 
     public static void deleteCourse(Integer id){  courseRepository.deleteCourseById(id);   }
+
+    public static void deleteCourseByCandidate(Integer id){  courseRepository.deleteCourseByCandidate(id);   }
+
+
+
 }

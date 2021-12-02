@@ -36,4 +36,7 @@ public class ApplicationService {
     }
 
     public static void deleteApplication(Integer id){  applicationRepository.deleteApplicationById(id);   }
+
+
+
 }

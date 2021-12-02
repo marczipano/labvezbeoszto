@@ -59,4 +59,11 @@ public class CourseController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @Transactional
+    @DeleteMapping (path ="/candidate/{id}")
+    public ResponseEntity<Course> deleteCourseByCandidate(@PathVariable("id") Integer id){
+        courseService.deleteCourseByCandidate(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }
