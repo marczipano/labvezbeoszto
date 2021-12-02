@@ -26,6 +26,13 @@ public class Course {
         this.duration = duration;
     }
 
+    public Course(Integer id, String beginningTime, int duration, String name, int tutorId) {
+        this.name = name;
+        this.beginTime = beginningTime;
+        this.duration = duration;
+
+    }
+
     public Course() {    }
 
     public Integer getId() {

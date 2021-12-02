@@ -36,9 +36,9 @@ public class CandidateController {
     }
 
     @GetMapping(path ="/{id}/courses")
-    public ResponseEntity<List<Course>> getCandidatesCourses(@PathVariable("id") Integer id){
+    public ResponseEntity<List<String>> getCandidatesCourses(@PathVariable("id") Integer id){
         Candidate candidate = candidateService.findCandidateById(id);
-        List<Course> courses = candidateService.findCandidatesCourses(candidate);
+        List<String> courses = candidateService.findCandidatesCourses(candidate.getId());
         return new ResponseEntity<>(courses, HttpStatus.OK);
     }
 

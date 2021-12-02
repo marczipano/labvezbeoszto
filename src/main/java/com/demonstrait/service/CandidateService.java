@@ -28,8 +28,8 @@ public class CandidateService {
         return candidateRepository.findCandidateById(id);
     }
 
-    public List<Course> findCandidatesCourses(Candidate candidate) {
-        return candidateRepository.findCandidatesCourses(candidate);
+    public List<String> findCandidatesCourses(Integer cid) {
+        return candidateRepository.findCandidatesCourses(cid);
     }
 
 
@@ -43,7 +43,6 @@ public class CandidateService {
 
 
     public static void deleteCandidate(Integer id){
-
         candidateRepository.deleteCandidateById(id);
 
     }
