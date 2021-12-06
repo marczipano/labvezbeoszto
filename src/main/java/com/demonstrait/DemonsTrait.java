@@ -1,5 +1,8 @@
 package com.demonstrait;
 
+import com.demonstrait.controller.ApplicationController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -11,13 +14,16 @@ import java.util.Arrays;
 
 
 @SpringBootApplication
-public class DemonsTrait {
+public class DemonsTrait  {
+
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemonsTrait.class, args);
+
+		//Algo algo = new Algo();
+		//algo.generateTutor();
 	}
-
-
 
 
 	@Bean
@@ -35,5 +41,6 @@ public class DemonsTrait {
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
+
 
 }
